@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <imageView width="132" height="92" alignment="left" id="jQr-as-7k8"/>
+                        <button width="1" alignment="left" title="Button" id="E88-fn-Lle">
+                            <connections>
+                                <segue destination="B3B-Qc-auX" kind="push" id="2fN-TY-lhe"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="196" y="294"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="3o7-Cl-O90">
+            <objects>
+                <controller id="B3B-Qc-auX">
+                    <items>
+                        <label width="121.5" alignment="left" text="显示文字" id="2VT-Tb-Uzx"/>
+                        <dateLabel alignment="left" id="3YX-rs-uBh">
+                            <dateFormatterStyle key="dateStyle" none="YES" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="left" id="lPL-nh-D0B"/>
+                        <button width="1" alignment="left" title="Button" id="qgN-qF-TwI">
+                            <connections>
+                                <segue destination="iTK-BS-TOJ" kind="push" id="axA-SP-eRZ"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="395" y="294"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="j0z-vF-ZHe">
+            <objects>
+                <controller id="iTK-BS-TOJ">
+                    <items>
+                        <label width="121.5" alignment="left" text="TableView" id="Heu-W5-58H"/>
+                        <table alignment="left" id="vSP-zf-d08">
+                            <items>
+                                <tableRow id="VOw-Oa-A6M">
+                                    <group key="rootItem" width="1" alignment="left" id="eht-fg-tj0">
+                                        <items>
+                                            <imageView width="41" alignment="left" id="3Tz-5c-7Mx"/>
+                                            <label width="59.5" alignment="left" text="描述" id="RdV-6Y-U93"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="PE6-qu-8nn" kind="push" id="3sA-EK-FlR"/>
+                                        </connections>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="294"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="vQ4-V8-1ME">
+            <objects>
+                <controller id="PE6-qu-8nn">
+                    <items>
+                        <map height="100" alignment="left" id="ulo-wv-UPh"/>
+                        <label alignment="left" text="地图" id="zwa-H2-2cK"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="723" y="294"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="143" y="567"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="395" y="583"/>
+        </scene>
+    </scenes>
+</document>
