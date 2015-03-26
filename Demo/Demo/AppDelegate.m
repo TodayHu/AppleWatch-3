@@ -42,4 +42,19 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application
+handleWatchKitExtensionRequest:(NSDictionary *)userInfo
+              reply:(void (^)(NSDictionary *replyInfo))reply {
+    NSLog(@"%@(%@)",userInfo,NSStringFromSelector(_cmd));
+    NSError *error = nil;
+    NSString *str = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://127.0.0.1"] encoding:NSUTF8StringEncoding error:&error];
+    if (error) {
+        
+        reply (@{@"key":@"have a error"});
+        
+    } else {
+        
+        reply (@{@"data":str});
+    }
+}
 @end

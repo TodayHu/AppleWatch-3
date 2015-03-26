@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24686BF41AC44C62007DE096 /* NetworkInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24686BF31AC44C62007DE096 /* NetworkInterfaceController.m */; };
+		24686BF71AC44D42007DE096 /* WatchDataCommunicateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 24686BF61AC44D42007DE096 /* WatchDataCommunicateManager.m */; };
 		249388BC1AC43E3800C71329 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 249388BB1AC43E3800C71329 /* main.m */; };
 		249388BF1AC43E3800C71329 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 249388BE1AC43E3800C71329 /* AppDelegate.m */; };
 		249388C21AC43E3800C71329 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 249388C11AC43E3800C71329 /* ViewController.m */; };
@@ -64,6 +66,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24686BF21AC44C62007DE096 /* NetworkInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterfaceController.h; sourceTree = "<group>"; };
+		24686BF31AC44C62007DE096 /* NetworkInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceController.m; sourceTree = "<group>"; };
+		24686BF51AC44D42007DE096 /* WatchDataCommunicateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchDataCommunicateManager.h; sourceTree = "<group>"; };
+		24686BF61AC44D42007DE096 /* WatchDataCommunicateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchDataCommunicateManager.m; sourceTree = "<group>"; };
 		249388B61AC43E3800C71329 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		249388BA1AC43E3800C71329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		249388BB1AC43E3800C71329 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +126,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24686BF11AC44C4B007DE096 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				24686BF21AC44C62007DE096 /* NetworkInterfaceController.h */,
+				24686BF31AC44C62007DE096 /* NetworkInterfaceController.m */,
+				24686BF51AC44D42007DE096 /* WatchDataCommunicateManager.h */,
+				24686BF61AC44D42007DE096 /* WatchDataCommunicateManager.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		249388AD1AC43E3800C71329 = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +203,7 @@
 		249388E41AC43E8600C71329 /* Demo WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				249389081AC440D100C71329 /* Lable */,
-				249389091AC440D100C71329 /* Map */,
+				24686BF11AC44C4B007DE096 /* Network */,
 				2493890A1AC440D100C71329 /* TableView */,
 				249388E81AC43E8600C71329 /* InterfaceController.h */,
 				249388E91AC43E8600C71329 /* InterfaceController.m */,
@@ -224,20 +240,6 @@
 				249388F81AC43E8600C71329 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		249389081AC440D100C71329 /* Lable */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lable;
-			sourceTree = "<group>";
-		};
-		249389091AC440D100C71329 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Map;
 			sourceTree = "<group>";
 		};
 		2493890A1AC440D100C71329 /* TableView */ = {
@@ -432,8 +434,10 @@
 			files = (
 				249388ED1AC43E8600C71329 /* NotificationController.m in Sources */,
 				249388EA1AC43E8600C71329 /* InterfaceController.m in Sources */,
+				24686BF41AC44C62007DE096 /* NetworkInterfaceController.m in Sources */,
 				2493890D1AC4423000C71329 /* TableViewInterfaceController.m in Sources */,
 				249389101AC4432A00C71329 /* TableRowController.m in Sources */,
+				24686BF71AC44D42007DE096 /* WatchDataCommunicateManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +692,7 @@
 				249388DB1AC43E3800C71329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		249388DC1AC43E3800C71329 /* Build configuration list for PBXNativeTarget "DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -696,6 +701,7 @@
 				249388DE1AC43E3800C71329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		249389011AC43E8600C71329 /* Build configuration list for PBXNativeTarget "Demo WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +710,7 @@
 				249389031AC43E8600C71329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		249389041AC43E8600C71329 /* Build configuration list for PBXNativeTarget "Demo WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +719,7 @@
 				249389061AC43E8600C71329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

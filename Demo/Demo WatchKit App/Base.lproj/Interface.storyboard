@@ -10,10 +10,15 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <imageView width="132" height="92" alignment="left" image="logo" id="jQr-as-7k8"/>
+                        <imageView width="136" height="92" alignment="left" image="logo" id="jQr-as-7k8"/>
                         <button width="1" alignment="left" title="Label Use" id="E88-fn-Lle">
                             <connections>
                                 <segue destination="B3B-Qc-auX" kind="push" id="2fN-TY-lhe"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Network" id="xpM-xn-ehF">
+                            <connections>
+                                <segue destination="Nri-Vf-zgg" kind="push" id="6Z7-G2-O0Y"/>
                             </connections>
                         </button>
                     </items>
@@ -40,7 +45,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="395" y="294"/>
+            <point key="canvasLocation" x="363" y="165"/>
         </scene>
         <!--Table View Interface Controller-->
         <scene sceneID="j0z-vF-ZHe">
@@ -104,12 +109,31 @@
             </objects>
             <point key="canvasLocation" x="143" y="567"/>
         </scene>
+        <!--Network Interface Controller-->
+        <scene sceneID="Pco-an-Mlx">
+            <objects>
+                <controller id="Nri-Vf-zgg" customClass="NetworkInterfaceController">
+                    <items>
+                        <label width="133.5" height="115.5" alignment="left" text="服务返回内容" id="7tk-kQ-R7Q"/>
+                        <button width="1" alignment="left" title="发送服务" id="7nP-4b-HAq">
+                            <connections>
+                                <action selector="doAction" destination="Nri-Vf-zgg" id="Y2V-0h-gQ7"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="resultLabel" destination="7tk-kQ-R7Q" id="LkG-7v-zyX"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="395" y="414"/>
+        </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController"/>
             </objects>
-            <point key="canvasLocation" x="395" y="583"/>
+            <point key="canvasLocation" x="380" y="667"/>
         </scene>
     </scenes>
 </document>
