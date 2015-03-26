@@ -10,8 +10,8 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
-                        <imageView width="132" height="92" alignment="left" id="jQr-as-7k8"/>
-                        <button width="1" alignment="left" title="Button" id="E88-fn-Lle">
+                        <imageView width="132" height="92" alignment="left" image="logo" id="jQr-as-7k8"/>
+                        <button width="1" alignment="left" title="Label Use" id="E88-fn-Lle">
                             <connections>
                                 <segue destination="B3B-Qc-auX" kind="push" id="2fN-TY-lhe"/>
                             </connections>
@@ -32,7 +32,7 @@
                             <dateFormatterStyle key="timeStyle" none="YES" short="YES"/>
                         </dateLabel>
                         <timer alignment="left" id="lPL-nh-D0B"/>
-                        <button width="1" alignment="left" title="Button" id="qgN-qF-TwI">
+                        <button width="1" alignment="left" title="TableView" id="qgN-qF-TwI">
                             <connections>
                                 <segue destination="iTK-BS-TOJ" kind="push" id="axA-SP-eRZ"/>
                             </connections>
@@ -42,28 +42,33 @@
             </objects>
             <point key="canvasLocation" x="395" y="294"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Table View Interface Controller-->
         <scene sceneID="j0z-vF-ZHe">
             <objects>
-                <controller id="iTK-BS-TOJ">
+                <controller id="iTK-BS-TOJ" customClass="TableViewInterfaceController">
                     <items>
-                        <label width="121.5" alignment="left" text="TableView" id="Heu-W5-58H"/>
                         <table alignment="left" id="vSP-zf-d08">
                             <items>
-                                <tableRow id="VOw-Oa-A6M">
-                                    <group key="rootItem" width="1" alignment="left" id="eht-fg-tj0">
+                                <tableRow identifier="TableRowController" id="VOw-Oa-A6M" customClass="TableRowController">
+                                    <group key="rootItem" width="1" height="58.5" alignment="left" id="eht-fg-tj0">
                                         <items>
-                                            <imageView width="41" alignment="left" id="3Tz-5c-7Mx"/>
-                                            <label width="59.5" alignment="left" text="描述" id="RdV-6Y-U93"/>
+                                            <imageView width="51" height="58" alignment="left" image="logo" id="JUw-HZ-EGM"/>
+                                            <label width="116.5" height="55.5" alignment="left" text="描述" textAlignment="left" id="RdV-6Y-U93"/>
                                         </items>
                                         <connections>
                                             <segue destination="PE6-qu-8nn" kind="push" id="3sA-EK-FlR"/>
                                         </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="descriptLabel" destination="RdV-6Y-U93" id="NFB-98-ewi"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="watchTable" destination="vSP-zf-d08" id="KcF-54-dyM"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="555" y="294"/>
@@ -75,10 +80,13 @@
                     <items>
                         <map height="100" alignment="left" id="ulo-wv-UPh"/>
                         <label alignment="left" text="地图" id="zwa-H2-2cK"/>
+                        <imageView alignment="left" image="logo" id="Q07-Jl-KIA"/>
+                        <label alignment="left" text="Label" id="Ncx-Yi-PzR"/>
+                        <imageView alignment="left" image="logo" id="pli-At-FZq"/>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="723" y="294"/>
+            <point key="canvasLocation" x="867" y="294"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
